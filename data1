@@ -1,3 +1,8 @@
 working with the github
 banking project
 modules
+#new code on 16-sept-25
+//for loop starting at 2 as that is the lowest prime number keep going until the array is as long as we requested
+for (var i = 2; primeArray.length < numPrimes; i++) {   
+    PrimeCheck(i); //
+}
