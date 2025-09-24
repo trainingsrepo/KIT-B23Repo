@@ -23,5 +23,21 @@ public Client(){
     startWriting();
 
 }
+#feature101 code changes by Vivek for Reports Module in sept2024
+ public Server(){
+      try{server = new ServerSocket(7777);
+        System.out.println("Server is ready to accept connection");
+        System.out.println("waiting...");
+        socket=server.accept();
+        
+        br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+        out = new PrintWriter(socket.getOutputStream());
+
+        startReading();
+        startWriting();
+ }
+ #end of feature101
+ 
     catch(Exception e){}
 }
