@@ -23,5 +23,25 @@ public Client(){
     startWriting();
 
 }
+#feature102 changes by ethan for transactions in sep 2024
+ public static void main(String s[]) throws Exception {
+        Socket sa = null;
+        ServerSocket ss2 = null;
+        System.out.println("Host starts accepting response ");
+        try {
+            ss2 = new ServerSocket(9999);
+        } catch (IOException e) {
+            System.out.println("server error");
+        }
+        while (true) {
+            try {
+                sa = ss2.accept();
+                System.out.println("connetion established by"+ ss2.getInetAddress());
+                ServerThread st = new ServerThread(sa);
+                st.start();
+            } catch (Exception e) {
+                System.out.println("connetion error");
+            }
+        }#end of feature102
     catch(Exception e){}
 }
